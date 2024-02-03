@@ -1,0 +1,79 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block content %}
+<div class="bg-secondary py-5"style='margin-top:6.7%;position: relative ;'>
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Login</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Log In To Your Account...</p>
+        </div>
+    </div>
+</div>
+
+<section class="vh-100 gradient-custom">
+    
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-secondary text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center" style='font-size:18px'>
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+                <p class="text-white-50 mb-5">Please enter your Username and password!</p>
+<form method="POST" action="{% url 'login' %}">
+{% csrf_token %}
+
+
+<div class="form-outline form-white mb-4">
+<input style='font-size:12px' type="text" class="form-control" name="username" placeholder="Enter Your Username">
+</div>
+
+
+
+<div class="form-outline form-white mb-4">
+<input style='font-size:12px' type="password" class="form-control" name="password" placeholder="Enter Your Password">
+</div>
+
+<p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+  
+<button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+
+<div class="d-flex justify-content-center text-center mt-4 pt-1">
+<a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+<a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+<a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+</div>
+
+</div>
+
+<div>
+<p class="mb-0">Don't have an account? <a href="#" class="text-white-50 fw-bold">Sign Up</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</form>
+<footer>
+
+    <ul class="social_icon">
+        <li><a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="mailto:mosup.050@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://github.com/Mosubmohammed"><i class="fa-brands fa-github"></i></a></li>
+    </ul>
+    <ul class="menu2">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#Products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#review">Review</a></li>
+        <!-- <li><a href="#">Order</a></li> -->
+    </ul>
+    <p>&copy;Yogurt  store | All rights Reserved </p>
+</footer>
+{%endblock%}

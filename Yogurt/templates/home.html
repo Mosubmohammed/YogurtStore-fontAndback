@@ -1,0 +1,381 @@
+{% extends "base.html" %}
+    {% load static %}
+{% block content %}
+
+<link href="{% static 'js/swiper-bundle.min.css' %}"></link>
+   <!-- <div id="perloader"></div> -->
+   
+
+
+    
+    <!-- ! home section starts -->
+    
+    <section class="home" id="home">
+    <div class="swiper mySwiper home-slider" class="new">
+        <div class="swiper-wrapper wrapper" id="new">
+            <div class="swiper-slide slide" class="new">
+                <div class="content">
+                    <span>our special Product</span>
+                    <h3>Yogurt</h3>
+                    <!-- <a href="#" class="btn">order now</a> -->
+                </div>
+                <div class="imgae">
+                    <img style="width: 700px;height: 550px;" src="{% static "media/Cacik-1.jpg" %}" alt="">
+                </div>
+            </div>
+    
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special Product</span>
+                    <h3>Labneh</h3>
+                    <!-- <a href="#" class="btn">order now</a> -->
+                </div>
+                <div class="imgae">
+                    <img style="width: 700px;height: 550px;" src="{% static "media/255-image.jpeg" %}" alt="">
+                </div>
+            </div>
+    
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special Product</span>
+                    <h3>Milk</h3>
+                    <!-- <a href="#" class="btn">order now</a> -->
+                </div>
+                <div class="imgae">
+                    <img style="width: 700px;height: 550px;" src="{% static "media/20201110132619701.jpg" %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    </section>
+    
+    <section class="Products active" id="Products">
+        <h3 class="sub-heading">our Products</h3>
+        <h1 class="heading">popular Products</h1>
+    
+    <div class="box-container">
+    
+        <!-- <div class="box">  -->
+            <div class="product-hover"><img src="{% static "media/20201110132619701.jpg" %}" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+             <h3 id="h3p">Milk</h3></div>
+            
+  <!--          <div class=" stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span>$3.99</span>
+          <a href="#" class="btn">Add to Cart</a> -->
+          
+          <!-- </div> -->
+    
+          <!-- <div class="box">  -->
+           <div class="product-hover"><img src="{% static "media/255-image.jpeg" %}" alt="">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+               <h3 id="h3p">Labneh</h3></div>
+              
+             <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>$5.99</span>
+            <a href="#" class="btn">Add to Cart</a> -->
+            
+            <!-- </div> -->
+    
+    
+            <!-- <div class="box">  -->
+              <div class="product-hover"><img src="{% static "media/Cacik-1.jpg" %}" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                 <h3 id="h3p">Yogurt</h3>
+                </div>
+                
+                <!--<div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span>$1.99</span>
+              <a href="#" class="btn">Add to Cart</a>
+               -->
+            <!-- </div> -->
+       </div>
+    </section>
+    
+    {% comment %} <!-- ! about section -->
+    <section class="about" id="about">
+        <h3 class="sub-heading">about us</h3>
+        <h1 class="heading">why choose us?</h1>
+    
+    <div class="row">
+        <div class="imaga">
+            <img src="" style="border-radius: 5%;" alt="">
+        </div>
+        <div class="content">
+            <h3>best Products in irbid</h3>
+            <p><strong>-We source our dairy products from trusted and reputable farms, 
+                ensuring that you receive nothing but the highest quality. Our commitment to quality is reflected in the freshness, taste,
+                 and nutritional value of every product.</strong></p>
+            <p><strong>- our user-friendly online platform, you can shop for dairy products from the comfort of your home or on the go.
+                 Enjoy hassle-free browsing, easy ordering, and prompt delivery, all designed to fit seamlessly into your busy lifestyle.</strong></p>
+            <div class="icons-container">
+    
+                <div class="icons">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>free delivery</span>
+                </div>
+    
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>easy payments</span>
+                </div>
+    
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+            <a href="#" class="btn">learn more</a>
+        </div>
+    </div>
+    
+    </section> {% endcomment %}
+     <!-- ! review section -->
+    <section class="review" id="review">
+    
+        <h3 class="sub-heading">customer's review</h3>
+        <h1 class="heading">what they say</h1>
+    
+        <div class="swiper-container review-slider">
+            <div class="swiper-wrapper" class="review">
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="{% static "media/jon.jpg" %}" alt="">
+                        <div class="user-info">
+    
+                            <h3>Samuel</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p> I'm thrilled with the quality of this organic whole milk! It's creamy, rich, and has
+                         a genuine, farm-fresh taste. Plus, knowing that it's produced using sustainable and 
+                         ethical practices is a huge plus for me. This is now a staple in my fridge.
+                    </p>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="{% static "media/join2.jpeg" %}" alt="">
+                        <div class="user-info">
+    
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>This artisanal cheese selection was 
+                        a delightful find! The variety was impressive, and each cheese had a distinct flavor profile.
+                         My only suggestion would be to include more detailed descriptions of each cheese for those 
+                         who may be less familiar with them.
+                    </p>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="{% static "media/join3.jpg" %}" alt="">
+                        <div class="user-info">
+    
+                            <h3>Benjamin</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p> I love the convenience of this Greek yogurt variety pack.
+                         The different flavors are a nice touch, and the yogurt itself is thick, creamy, 
+                         and packed with probiotics. My only tiny gripe is that I wish there were more options in the pack
+                    </p>
+                </div>
+
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="{% static "media/myaw.jpg" %}" alt="">
+                        <div class="user-info">
+    
+                            <h3>Aiden</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p> I love the convenience of this Greek yogurt variety pack. The different flavors are a nice touch,
+                         and the yogurt itself is thick, creamy, 
+                        and packed with probiotics. My only tiny gripe is that I wish there were more options in the pack.
+                    </p>
+                </div>
+
+
+                
+    
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="{% static "media/join4.jpg" %}" alt="">
+                        <div class="user-info">
+    
+                            <h3>Olivia</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>I'm lactose intolerant, so finding a good-tasting, lactose-free milk is important to me.
+                         This brand does the job quite well. 
+                        It's creamy and doesn't have that strange aftertaste that some lactose-free milks tend to have.
+                    </p>
+                </div>
+    
+            </div>
+        </div>
+    
+    </section> 
+
+    
+   
+    
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+     </a>
+    
+    
+    
+    
+    
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> {% endcomment %}
+    
+    <footer style="margin-top:70%">
+
+        <ul class="social_icon">
+            <li><a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="mailto:mosup.050@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://github.com/Mosubmohammed"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+        <ul class="menu2">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#review">Review</a></li>
+            <!-- <li><a href="#">Order</a></li> -->
+        </ul>
+        <p>&copy;Yogurt  store | All rights Reserved </p>
+    </footer>
+
+
+    
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/swiper-bundle.min.mjs' %}"></script>
+    <script>
+        var swiper = new Swiper(".home-slider", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 7500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          loop: true,
+          });
+        
+        
+          
+          var swiper = new Swiper(".review-slider", {
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+              delay: 7500,
+              disableOnInteraction: false,
+            },
+          loop: true,
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
+          });
+    </script>
+{%endblock%}
+
+
