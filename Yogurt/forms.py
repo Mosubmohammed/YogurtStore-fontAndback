@@ -1,7 +1,22 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm,UserChangeForm, SetPasswordForm
 from django import forms
+from .models import *
 
+class UserInfoForm(forms.ModelForm):
+    Phone=forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Phone Number'}),required=False)
+    Address1=forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Address1'}),required=False)
+    Address2=forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Address2'}),required=False)
+    City=forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'City'}),required=False)
+    State=forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'State'}),required=False)
+    Zipcode=forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Zipcode'}),required=False)
+    Country=forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Country'}),required=False)
+    
+    class Meta:
+        model=Profile
+        fields=('Phone','Address1','Address2','City','State','Zipcode','Country')
+        
+        
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
     first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}))
@@ -32,9 +47,9 @@ class UpdateUserForm(UserChangeForm):
 	# Hide Password stuff
 	password = None
 	# Get other fields
-	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
-	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}))
-	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Last Name'}))
+	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}),required=False)
+	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}),required=False)
+	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Last Name'}),required=False)
 
 	class Meta:
 		model = User

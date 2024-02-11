@@ -11,21 +11,24 @@
     </div>
 </div> {% endcomment %}
 <section class="about" id="about" style='margin-top:6.7%'>
+    
 
 <div class="row">
 
-    <div class="imaga" style='wight:50px'>
+    <div class="imaga">
 
-        <img src="{% static "media/4489606-1036027969.jpg" %}" style="border-radius: 5%;" alt="">
+        <img src="{% static "media/4489606-1036027969.jpg" %}" style="heigh:5px" alt="">
 
     </div>
-    <div class="content">
+    <div class="content"  style="font-size:15px">
+        <div>
         <h3>best Products in irbid</h3>
-        <p><strong>-We source our dairy products from trusted and reputable farms, 
+        <p  style="font-size:13px"><strong>-We source our dairy products from trusted and reputable farms, 
             ensuring that you receive nothing but the highest quality. Our commitment to quality is reflected in the freshness, taste,
              and nutritional value of every product.</strong></p>
-        <p><strong>- our user-friendly online platform, you can shop for dairy products from the comfort of your home or on the go.
+        <p  style="font-size:13px"><strong>- our user-friendly online platform, you can shop for dairy products from the comfort of your home or on the go.
              Enjoy hassle-free browsing, easy ordering, and prompt delivery, all designed to fit seamlessly into your busy lifestyle.</strong></p>
+        </div>
         <div class="icons-container">
 
             <div class="icons">
@@ -43,27 +46,40 @@
                 <span>24/7 service</span>
             </div>
         </div>
-        <a href="#" class="btn" style='border-color: black;'>learn more</a>
+        <a href="#" class="btn" style='border-color: black;font-weight:450'>learn more</a>
     </div>
 </div>
 
 </section>
 <footer>
-
-    <ul class="social_icon">
-        <li><a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a></li>
-        <li><a href="mailto:mosup.050@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-        <li><a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="><i class="fa-brands fa-instagram"></i></a></li>
-        <li><a href="https://github.com/Mosubmohammed"><i class="fa-brands fa-github"></i></a></li>
-    </ul>
-    <ul class="menu2">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#Products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#review">Review</a></li>
-        <!-- <li><a href="#">Order</a></li> -->
-    </ul>
-    <p>&copy;Yogurt  store | All rights Reserved </p>
+  <ul class="social_icon">
+    <li>
+      <a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+    </li>
+    <li>
+      <a href="mailto:mosup.050@gmail.com"
+        ><i class="fa-solid fa-envelope"></i
+      ></a>
+    </li>
+    <li>
+      <a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+    </li>
+    <li>
+      <a href="https://github.com/Mosubmohammed"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+    </li>
+  </ul>
+  <ul class="menu2" style="text-decoration: none;">
+    <li><a style="text-decoration:none;font-weight: 600" href="{% url 'home'%}">Home</a></li>
+    <li><a style="text-decoration:none;font-weight: 600" href="{% url 'about'%}">About</a></li>
+    <li><a style="text-decoration:none;font-weight: 600" href="{% url 'menu'%}">Menu</a></li>
+    
+  </ul>
+  <p>&copy;Yogurt store | All rights Reserved</p>
 </footer>
 {%endblock%}

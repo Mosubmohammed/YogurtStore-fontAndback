@@ -59,7 +59,7 @@
     
         <!-- <div class="box">  -->
             <div class="product-hover"><img src="{% static "media/20201110132619701.jpg" %}" alt="">
-                <div class="stars">
+                <div class="stars" style="color:gold;font-size:13.5px">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -82,7 +82,7 @@
     
           <!-- <div class="box">  -->
            <div class="product-hover"><img src="{% static "media/255-image.jpeg" %}" alt="">
-            <div class="stars">
+            <div class="stars" style="color:gold;font-size:13.5px">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -106,7 +106,7 @@
     
             <!-- <div class="box">  -->
               <div class="product-hover"><img src="{% static "media/Cacik-1.jpg" %}" alt="">
-                <div class="stars">
+                <div class="stars" style="color:gold;font-size:13.5px">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -312,24 +312,37 @@
     
     {% comment %} <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> {% endcomment %}
     
-    <footer style="margin-top:70%">
-
+    <footer>
         <ul class="social_icon">
-            <li><a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="mailto:mosup.050@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-            <li><a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://github.com/Mosubmohammed"><i class="fa-brands fa-github"></i></a></li>
+          <li>
+            <a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:mosup.050@gmail.com"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/Mosubmohammed"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
         </ul>
-        <ul class="menu2">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#Products">Products</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#review">Review</a></li>
-            <!-- <li><a href="#">Order</a></li> -->
+        <ul class="menu2" style="text-decoration: none;">
+          <li><a style="text-decoration:none;font-weight: 600" href="{% url 'home'%}">Home</a></li>
+          <li><a style="text-decoration:none;font-weight: 600" href="{% url 'about'%}">About</a></li>
+          <li><a style="text-decoration:none;font-weight: 600" href="{% url 'menu'%}">Menu</a></li>
+          
         </ul>
-        <p>&copy;Yogurt  store | All rights Reserved </p>
-    </footer>
+        <p>&copy;Yogurt store | All rights Reserved</p>
+      </footer>
 
 
     
@@ -337,6 +350,7 @@
     <script src="{% static 'js/swiper-bundle.min.mjs' %}"></script>
     <script>
         var swiper = new Swiper(".home-slider", {
+            
             spaceBetween: 30,
             centeredSlides: true,
             autoplay: {

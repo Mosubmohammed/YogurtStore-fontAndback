@@ -18,7 +18,7 @@ text-transform: capitalize;
 transition: all .2s linear;
 list-style: none;
 }
-header .login-form{
+/* header .login-form{
     background: #02ac70;
     position:absolute ;
     top: 110%;right: -110%;
@@ -59,7 +59,7 @@ header .login-form p{
 header .login-form p a{
     color: lightblue;
     text-decoration: underline;
-}
+} */
 /*=============== SCROLL UP ===============*/
 /* .scrollup{
     position: fixed;
@@ -84,12 +84,12 @@ header .login-form p a{
     bottom: 7.5rem;
 }  */
 
-
+/* 
 .total-price{
     font-family: 'Poppins', sans-serif; 
     font-size: 1.080rem;
     margin: 1rem 0 0 0.7rem;
-}
+} */
 
 
 html{
@@ -155,7 +155,6 @@ section:nth-child(even){
     font-weight: 600;
     margin-top: 1rem;
 }
-
 .total-price{
     font-family: 'Poppins', sans-serif; 
     font-size: 1.080rem;
@@ -496,6 +495,7 @@ padding-top: 9rem;
     background:lightblue;
 }
 
+
 .Products .box-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -583,6 +583,9 @@ padding-top: 9rem;
   .Products .box-container .product-hover .stars i{
     font-size: 1.7rem;
     color: gold;
+   }
+   .stars i{
+    color:gold;
    }
    .Products .box-container .box span{
     color:lightblue ;
@@ -672,6 +675,10 @@ padding-top: 9rem;
    }
    
    .menu .box-container .box:hover{
+    transition: 0.7s ease;
+    transform: scale(1.1);
+   }
+   .card:hover{
     transition: 0.7s ease;
     transform: scale(1.1);
    }
@@ -835,11 +842,18 @@ padding-top: 9rem;
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
+    text-decoration: none;
    }
 
    footer .social_icon li,
    footer .menu2 li{
     list-style: none;
+   }
+   .menu2{
+    text-decoration: none;
+   }
+   footer .menu2 li{
+    text-decoration: none;
    }
 
    footer .social_icon li a{
@@ -920,21 +934,12 @@ opacity: 0;
 
 
 
-
  
 
 
-@media (min-width: 600px) and (max-width: 1024px) {
+
+/* @media (min-width: 600px) and (max-width: 1024px) {
     
-    /* section{
-        
-        padding: 2rem 9%;
-        width: 150%;
-    
-    }
-    footer{
-        width: 150%;
-    } */
     .cart{
         height: 100%;
     }
@@ -945,9 +950,7 @@ opacity: 0;
     .review{
         height: 90%;
     }
-    /* .review .slide{
-        height: 60%;
-    } */
+
     .color {
       color: lightblue;
       transform: translateY(50px);
@@ -1002,9 +1005,9 @@ opacity: 0;
 
     }
     #h3p{
-        margin-right: 14rem;
+        margin-right: 6rem;
     }
-  } 
+  }  */
 
   @media (min-width: 700px) and (max-width: 950px){
     body
@@ -1020,7 +1023,7 @@ opacity: 0;
 
       }
   }
-  /* Child.css */
+
  
  
  @media (max-width: 991px){
@@ -1048,4 +1051,4 @@ opacity: 0;
         height: 1000px;
 
       }
-} *//*
+} 

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Yogurt',
+    'cart',
     'bootstrap5',
     'fontawesomefree',
 ]
@@ -67,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
                 
             ],
         },
@@ -85,6 +87,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {   
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+#             'NAME': 'Yogurtdata',       
+#             'USER': 'admin2',       
+#             'PASSWORD': 'mosup12345',       
+#             'HOST': '127.0.0.1',       
+#             'PORT': '5432',   
+#         }
+#     }
+
 
 
 # Password validation
