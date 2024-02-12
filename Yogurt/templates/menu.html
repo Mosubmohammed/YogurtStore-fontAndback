@@ -1,87 +1,118 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
-<div class="headerB" class="bg-secondary py-5" style="margin-top: 5.3%;position: relative ;">
-  <div class="container px-4 px-lg-5 my-5">
-    <div class="text-center text-white">
-      <h1 class="display-4 fw-bolder">Our Menu</h1>
-      <p class="lead fw-normal text-white-50 mb-0">
-        Choose Your Product Below...
-      </p>
+<section class="py-5">
+  <div class="headerB" class="bg-secondary py-5" style="margin-top: 150px; position: relative">
+    <div class="container px-4 px-lg-5 my-5" style="color: #192a56;">
+      <div class="text-center">
+        <h1 class="display-4 fw-bolder">Our Menu</h1>
+        <p class="lead fw-normal mb-0">
+          Choose Your Product Below...
+        </p>
+      </div>
     </div>
   </div>
-</div>
-<section class="py-5">
   <div class="container px-4 px-lg-5 mt-5">
-      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" style="font-size:13px;">
-          
-          {% for product in menu %}
-          {% if product.is_sale%}
-          <div class="col mb-5">
-              <div class="card h-100" style="border-radius:2rem;border-color:hsl(207, 4%,75%);">
-                  <!-- Product image-->
-                  <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                  <img class="card-img-top" style="height:67%" src="{{ product.image.url }}" alt="..." />
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder" style="font-size:16.5px">{{ product.Name }}</h5>
-                          <div class="d-flex justify-content-center small text-warning mb-2">
-                              <div class="bi-star-fill"></div>
-                              &nbsp;&nbsp;Sale!&nbsp;&nbsp;
-                              <div class="bi-star-fill"></div>
-
-                          </div>
-                          <!-- Product price-->
-                          <strike style="text-decoration: line-through">
-                              ${{ product.Price }}
-                          </strike>
-                          &nbsp;
-                          ${{ product.sale_price }}
-                          
-                          <br/>
-                          {{ product.Description }}
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' product.id %}">View Product</a></div>
-                  </div>
-              </div>
+    <div
+      class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
+      style="font-size: 13px; margin-top: 100px"
+    >
+      {% for product in menu %} {% if product.is_sale%}
+      <div class="col mb-5">
+        <div
+          class="card h-100"
+          style="border-radius: 2rem; border-color: hsl(207, 4%, 75%)"
+        >
+          <!-- Product image-->
+          <div
+            class="badge bg-dark text-white position-absolute"
+            style="top: 0.5rem; right: 0.5rem"
+          >
+            Sale
           </div>
-          
-          {% else %}
-          <div class="col mb-5">
-              <div class="card h-100" style="border-radius:2rem;border-color:hsl(207, 4%,75%);">
-                  <!-- Product image-->
-                  <img class="card-img-top" style="height:65%" src="{{ product.image.url }}" alt="..." />
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder" style="font-size:16.5px">{{ product.Name }}</h5>
-                          
-                          <!-- Product price-->
-                          ${{ product.Price }}
-                          <br/>
-                          {{ product.Description }}
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' product.id %}">View Product</a></div>
-                  </div>
+          <img
+            class="card-img-top"
+            style="height: 67%"
+            src="{{ product.image.url }}"
+            alt="..."
+          />
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder" style="font-size: 16.5px">
+                {{ product.Name }}
+              </h5>
+              <div
+                class="d-flex justify-content-center small text-warning mb-2"
+              >
+                <div class="bi-star-fill"></div>
+                &nbsp;&nbsp;Sale!&nbsp;&nbsp;
+                <div class="bi-star-fill"></div>
               </div>
+              <!-- Product price-->
+              <strike style="text-decoration: line-through">
+                ${{ product.Price }}
+              </strike>
+              &nbsp; ${{ product.sale_price }}
+
+              <br />
+              {{ product.Description }}
+            </div>
           </div>
-          {% endif %}
-          {% endfor %}
-
-
-
-                         
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a
+                class="btn btn-outline-dark mt-auto"
+                href="{% url 'product' product.id %}"
+                >View Product</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
+
+      {% else %}
+      <div class="col mb-5">
+        <div
+          class="card h-100"
+          style="border-radius: 2rem; border-color: hsl(207, 4%, 75%)"
+        >
+          <!-- Product image-->
+          <img
+            class="card-img-top"
+            style="height: 65%"
+            src="{{ product.image.url }}"
+            alt="..."
+          />
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder" style="font-size: 16.5px">
+                {{ product.Name }}
+              </h5>
+
+              <!-- Product price-->
+              ${{ product.Price }}
+              <br />
+              {{ product.Description }}
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a
+                class="btn btn-outline-dark mt-auto"
+                href="{% url 'product' product.id %}"
+                >View Product</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
   </div>
 </section>
 <footer>
@@ -107,11 +138,22 @@
       ></a>
     </li>
   </ul>
-  <ul class="menu2" style="text-decoration: none;">
-    <li><a style="text-decoration:none;font-weight: 600" href="{% url 'home'%}">Home</a></li>
-    <li><a style="text-decoration:none;font-weight: 600" href="{% url 'about'%}">About</a></li>
-    <li><a style="text-decoration:none;font-weight: 600" href="{% url 'menu'%}">Menu</a></li>
-    
+  <ul class="menu2" style="text-decoration: none">
+    <li>
+      <a style="text-decoration: none; font-weight: 600" href="{% url 'home'%}"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a style="text-decoration: none; font-weight: 600" href="{% url 'about'%}"
+        >About</a
+      >
+    </li>
+    <li>
+      <a style="text-decoration: none; font-weight: 600" href="{% url 'menu'%}"
+        >Menu</a
+      >
+    </li>
   </ul>
   <p>&copy;Yogurt store | All rights Reserved</p>
 </footer>
