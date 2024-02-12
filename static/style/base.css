@@ -18,7 +18,7 @@ text-transform: capitalize;
 transition: all .2s linear;
 list-style: none;
 }
-header .login-form{
+/* header .login-form{
     background: #02ac70;
     position:absolute ;
     top: 110%;right: -110%;
@@ -59,7 +59,7 @@ header .login-form p{
 header .login-form p a{
     color: lightblue;
     text-decoration: underline;
-}
+} */
 /*=============== SCROLL UP ===============*/
 /* .scrollup{
     position: fixed;
@@ -84,12 +84,12 @@ header .login-form p a{
     bottom: 7.5rem;
 }  */
 
-
+/* 
 .total-price{
     font-family: 'Poppins', sans-serif; 
     font-size: 1.080rem;
     margin: 1rem 0 0 0.7rem;
-}
+} */
 
 
 html{
@@ -607,7 +607,7 @@ padding-top: 9rem;
    }
 
    .about .row .content{
-    flex:1 1 45rem ;
+    flex:1 1 15rem ;
    }
 
    .about .row .content h3{
@@ -622,6 +622,7 @@ padding-top: 9rem;
     padding:.5rem 0 ;
     line-height: 2;
    }
+
 
    .about .row .content .icons-container{
     display: flex;
@@ -924,13 +925,17 @@ top: 110%;
 opacity: 0;
 } */
 
-   
+.swiper-wrapper{
+    display: inline-flex;
+}
+#home-swiper{
+    display: inline-flex;
+}
 
 
 
 
  
-
 
 
 

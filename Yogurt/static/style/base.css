@@ -464,7 +464,8 @@ padding-top: 9rem;
 }
 
 .home .home-slider .slide .content{
-    flex: 1 1 45rem;
+    flex: 0 1 15rem;
+
     
 }
 
@@ -476,7 +477,8 @@ padding-top: 9rem;
 
 .home .home-slider .slide .content span{
     color: lightblue;
-    font-size: 2.5rem;
+    font-size: 17.1px;
+    
 }
 
 .home .home-slider .slide .content h3{
@@ -607,21 +609,22 @@ padding-top: 9rem;
    }
 
    .about .row .content{
-    flex:1 1 45rem ;
+    flex:1 1 15rem ;
    }
 
    .about .row .content h3{
     color:#192a56;
-    font-size: 4rem;
+    font-size: 5.5rem;
     padding:.5rem 0 ;
    }
 
    .about .row .content p{
     color:#666;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     padding:.5rem 0 ;
     line-height: 2;
    }
+
 
    .about .row .content .icons-container{
     display: flex;
@@ -924,7 +927,12 @@ top: 110%;
 opacity: 0;
 } */
 
-   
+.swiper-wrapper{
+    display: inline-flex;
+}
+#home-swiper{
+    display: inline-flex;
+}
 
 
 

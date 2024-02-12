@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-    {% load static %}
+{% load static %}
 {% block content %}
-
 <link href="{% static 'js/swiper-bundle.min.css' %}"></link>
+<link rel="stylesheet" href="{% static 'style/base.css' %}" />
+
    <!-- <div id="perloader"></div> -->
    
 
@@ -10,9 +11,9 @@
     
     <!-- ! home section starts -->
     
-    <section class="home" id="home">
+    <div class="home" id="home" style="padding:3%">
     <div class="swiper mySwiper home-slider" class="new">
-        <div class="swiper-wrapper wrapper" id="new">
+        <div class="swiper-wrapper wrapper" id="home-swiper">
             <div class="swiper-slide slide" class="new">
                 <div class="content">
                     <span>our special Product</span>
@@ -20,38 +21,38 @@
                     <!-- <a href="#" class="btn">order now</a> -->
                 </div>
                 <div class="imgae">
-                    <img style="width: 700px;height: 550px;" src="{% static "media/Cacik-1.jpg" %}" alt="">
+                    <img style="width: 700px;height: 550px;margin-left:50%" src="{% static "media/Cacik-1.jpg" %}" alt="">
                 </div>
             </div>
     
-            <div class="swiper-slide slide">
+            <div class="swiper-slide slide" style="margin-left:40px">
                 <div class="content">
                     <span>our special Product</span>
                     <h3>Labneh</h3>
                     <!-- <a href="#" class="btn">order now</a> -->
                 </div>
                 <div class="imgae">
-                    <img style="width: 700px;height: 550px;" src="{% static "media/255-image.jpeg" %}" alt="">
+                    <img style="width: 700px;height: 550px;margin-left:50%" src="{% static "media/255-image.jpeg" %}" alt="">
                 </div>
             </div>
     
-            <div class="swiper-slide slide">
+            <div class="swiper-slide slide" style="margin-left:90px">
                 <div class="content">
                     <span>our special Product</span>
                     <h3>Milk</h3>
                     <!-- <a href="#" class="btn">order now</a> -->
                 </div>
                 <div class="imgae">
-                    <img style="width: 700px;height: 550px;" src="{% static "media/20201110132619701.jpg" %}" alt="">
+                    <img style="width: 700px;height: 550px;margin-left:50%" src="{% static "media/20201110132619701.jpg" %}" alt="">
                 </div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
     
-    </section>
+    </div>
     
-    <section class="Products active" id="Products">
+    <section class="Products active" id="Products" style="background-color:#eee;padding-bottom: 3%;">
         <h3 class="sub-heading">our Products</h3>
         <h1 class="heading">popular Products</h1>
     
@@ -169,7 +170,7 @@
     
     </section> {% endcomment %}
      <!-- ! review section -->
-    <section class="review" id="review">
+    <div class="review" id="review" style="padding:1.3%">
     
         <h3 class="sub-heading">customer's review</h3>
         <h1 class="heading">what they say</h1>
@@ -296,7 +297,7 @@
             </div>
         </div>
     
-    </section> 
+    </div> 
 
     
    
