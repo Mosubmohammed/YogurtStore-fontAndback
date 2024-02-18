@@ -1,23 +1,47 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-
-<section class="py-5">
-  <div class="headerB" class="bg-secondary py-5" style="margin-top: 150px; position: relative">
-    <div class="container px-4 px-lg-5 my-5" style="color: #192a56;">
-      <div class="text-center">
-        <h1 class="display-4 fw-bolder" style="font-size:45px">Our Menu</h1>
-        <p class="lead fw-normal mb-0" style="font-size:13px">
-          Choose Your Product Below...
-        </p>
-      </div>
+<div class="bg-secondary py-5" style="margin-top: 6.7%">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="text-center text-white">
+      <h1 class="display-4 fw-bolder">Search Products</h1>
+      <p class="lead fw-normal text-white-50 mb-0">
+        Fint What You're Looking For...!
+      </p>
     </div>
   </div>
-  <div class="container px-4 px-lg-5 mt-5">
+</div>
+<div style="margin-top: 4%">
+  <div class="row">
+    <center>
+      <div class="col-7">
+        <div class="card">
+          <div class="card-header">Search Products</div>
+          <div class="card-body">
+            <form method="POST" action="{% url 'search' %}">
+              {% csrf_token %}
+              <div class="mb-3">
+                <input
+                  name="searched"
+                  type="test"
+                  class="form-control"
+                  placeholder="search for products"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-secondary">Search</button>
+            </form>
+
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </center>
     <div
       class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
       style="font-size: 13px; margin-top: 100px"
     >
-      {% for product in menu %}
-       {% if product.is_sale%}
+      {% if searched %}
+       {%for product in searched%}
+        {% if product.is_sale%}
       <div class="col mb-5">
         <div
           class="card h-100"
@@ -112,50 +136,60 @@
           </div>
         </div>
       </div>
-      {% endif %} {% endfor %}
+      {% endif %}
+       {% endfor %}
+        {% endif %}
+        
     </div>
-  </div>
-</section>
-<footer>
-  <ul class="social_icon">
-    <li>
-      <a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"
-        ><i class="fa-brands fa-facebook"></i
-      ></a>
-    </li>
-    <li>
-      <a href="mailto:mosup.050@gmail.com"
-        ><i class="fa-solid fa-envelope"></i
-      ></a>
-    </li>
-    <li>
-      <a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="
-        ><i class="fa-brands fa-instagram"></i
-      ></a>
-    </li>
-    <li>
-      <a href="https://github.com/Mosubmohammed"
-        ><i class="fa-brands fa-github"></i
-      ></a>
-    </li>
-  </ul>
-  <ul class="menu2" style="text-decoration: none">
-    <li>
-      <a style="text-decoration: none; font-weight: 600" href="{% url 'home'%}"
-        >Home</a
-      >
-    </li>
-    <li>
-      <a style="text-decoration: none; font-weight: 600" href="{% url 'about'%}"
-        >About</a
-      >
-    </li>
-    <li>
-      <a style="text-decoration: none; font-weight: 600" href="{% url 'menu'%}"
-        >Menu</a
-      >
-    </li>
-  </ul>
-  <p>&copy;Yogurt store | All rights Reserved</p>
-</footer>
-{%endblock%}
+
+
+  <footer style="margin-top: 7%">
+    <ul class="social_icon">
+      <li>
+        <a href="https://www.facebook.com/mosap.mohammed.543?mibextid=LQQJ4d"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+      </li>
+      <li>
+        <a href="mailto:mosup.050@gmail.com"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </li>
+      <li>
+        <a href="https://instagram.com/3nksoryy?igshid=NTc4MTIwNjQ2YQ=="
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </li>
+      <li>
+        <a href="https://github.com/Mosubmohammed"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </li>
+    </ul>
+    <ul class="menu2" style="text-decoration: none">
+      <li>
+        <a
+          style="text-decoration: none; font-weight: 600"
+          href="{% url 'home'%}"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          style="text-decoration: none; font-weight: 600"
+          href="{% url 'about'%}"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          style="text-decoration: none; font-weight: 600"
+          href="{% url 'menu'%}"
+          >Menu</a
+        >
+      </li>
+    </ul>
+    <p>&copy;Yogurt store | All rights Reserved</p>
+  </footer>
+  {%endblock%}
+</div>
